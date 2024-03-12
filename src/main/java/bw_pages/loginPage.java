@@ -18,9 +18,10 @@ public class loginPage extends base {
         PageFactory.initElements(driver,this);
     }
     //Actions:
-    public homePage multipleUserLogin(String username, String password){
+    public homePage multipleUserLogin(String username, String password) throws InterruptedException {
         txtUsername.sendKeys(username);
         txtPassword.sendKeys(password);
+        Thread.sleep(1000);
         btnLogin.click();
 
         return new homePage();

@@ -5,11 +5,9 @@ import bw_pages.homePage;
 import bw_pages.loginPage;
 import bw_utility.utility;
 //import org.junit.Test;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
+//@Listeners(bw_listener.listeners.class)
 public class loginPageTest extends base {
     loginPage l;
     homePage h;
@@ -30,11 +28,10 @@ public class loginPageTest extends base {
     }
 
     @Test(dataProvider = "getLoginTestData", priority=1)
-    public void multipleUserLoginTest(String username, String password){
+    public void multipleUserLoginTest(String username, String password) throws InterruptedException {
         System.out.println("Multiple user login method running...");
         loginPage l = new loginPage();
         h=l.multipleUserLogin(username,password);
-//        h = l.multipleUserLogin(prop.getProperty("username"),prop.getProperty("password"));
     }
 
     @AfterMethod

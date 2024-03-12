@@ -1,6 +1,8 @@
 package bw_baseClass;
 
 import bw_utility.utility;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,6 +16,8 @@ import java.util.concurrent.TimeUnit;
 public class base {
     public static WebDriver driver;
     public static Properties prop;
+    public ExtentReports extent = new ExtentReports();
+    public ExtentSparkReporter spark = new ExtentSparkReporter("D:\\Quality Kiosk SDET\\Application Interface & E2E QA\\bookswagon\\test-output\\ExtentReport.html");
     public base(){
         try{
             prop = new Properties();
