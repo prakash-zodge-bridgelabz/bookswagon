@@ -12,8 +12,8 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class base {
-    static WebDriver driver;
-    static Properties prop;
+    public static WebDriver driver;
+    public static Properties prop;
     public base(){
         try{
             prop = new Properties();
