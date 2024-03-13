@@ -25,7 +25,6 @@ public class utility extends base {
         FileHandler.copy(SFile,DFile);
     }
 
-
     //Reading excel data
     public static String testDataPath="D:\\Quality Kiosk SDET\\Application Interface & E2E QA\\bookswagon\\src\\main\\java\\bw_testData\\loginDetails.xlsx";
 

@@ -26,4 +26,13 @@ public class loginPage extends base {
 
         return new homePage();
     }
+    public String validatePageTitle(){
+        return driver.getTitle();
+    }
+    public homePage login(String username, String password){
+        txtUsername.sendKeys(username);
+        txtPassword.sendKeys(password);
+        btnLogin.click();
+        return new homePage();
+    }
 }

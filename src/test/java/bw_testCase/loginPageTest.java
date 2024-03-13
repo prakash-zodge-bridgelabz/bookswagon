@@ -34,6 +34,15 @@ public class loginPageTest extends base {
         h=l.multipleUserLogin(username,password);
     }
 
+    @Test(priority = 2)
+    public void singleUserLogin(){
+        h = l.login(prop.getProperty("ruchitaUsername"), prop.getProperty("ruchitaPassword"));
+
+    }
+
+    String homePageTitle = "\n" +
+            "\tOnline BookStore India, Buy Books Online, Buy Book Online India - Bookswagon.com ";
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
