@@ -4,11 +4,13 @@ import bw_baseClass.base;
 import bw_pages.homePage;
 import bw_pages.loginPage;
 import bw_pages.myOrdersPage;
+import io.qameta.allure.SeverityLevel;
 import net.bytebuddy.build.Plugin;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import io.qameta.allure.Severity;
 
 public class homePageTest extends base {
     loginPage l;
@@ -26,6 +28,7 @@ public class homePageTest extends base {
     }
 
     @Test(priority=1)
+    @Severity(SeverityLevel.BLOCKER)
     public void verifyHomePageTitleTest(){
         String actualTitle = h.verifyHomePageTitle();
         System.out.println(actualTitle);
@@ -33,6 +36,7 @@ public class homePageTest extends base {
         Assert.assertEquals(actualTitle,expectedTitle,"Not matched");
     }
     @Test(priority = 2)
+    @Severity(SeverityLevel.BLOCKER)
     public void verifyUsernameTest(){
         String actualUsername = h.verifyUsername();
         System.out.println(actualUsername);
@@ -41,6 +45,7 @@ public class homePageTest extends base {
     }
 
     @Test(priority=3)
+    @Severity(SeverityLevel.BLOCKER)
     public void verifyMyOrdersLink(){
         m = h.clickOnMyOrders();
     }

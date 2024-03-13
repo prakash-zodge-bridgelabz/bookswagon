@@ -6,9 +6,27 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="D:/Quality Kiosk SDET/Application Interface &amp; E2E QA/bookswagon">
         <classes>
+            <class name="bw_testCase.homePageTest">
+                <methods>
+                    <include name="verifyHomePageTitleTest"/>
+                    <include name="verifyUsernameTest"/>
+                    <include name="verifyMyOrdersLink"/>
+                </methods>
+            </class>
             <class name="bw_testCase.loginPageTest">
                 <methods>
                     <include name="multipleUserLoginTest"/>
+                    <include name="singleUserLogin"/>
+                </methods>
+            </class>
+            <class name="bw_testCase.myOrdersPageTest">
+                <methods>
+                    <include name="verifyMyOrdersPageHeadingTest"/>
+                </methods>
+            </class>
+            <class name="bw_testCase.myWishlistPageTest">
+                <methods>
+                    <include name="verifyMWishlistHeadingTest"/>
                 </methods>
             </class>
         </classes>

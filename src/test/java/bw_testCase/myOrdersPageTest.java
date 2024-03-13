@@ -4,6 +4,8 @@ import bw_baseClass.base;
 import bw_pages.homePage;
 import bw_pages.loginPage;
 import bw_pages.myOrdersPage;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -23,7 +25,8 @@ public class myOrdersPageTest extends base {
         h=l.login(prop.getProperty("ruchitaUsername"), prop.getProperty("ruchitaPassword"));
         m = new myOrdersPage();
     }
-    @Test(priority=1)
+    @Test(priority=6)
+    @Severity(SeverityLevel.BLOCKER)
     public void verifyMyOrdersPageHeadingTest(){
         m=h.clickOnMyOrders();
         String actualHeading = m.verifyMyOrdersPageHeading();

@@ -6,6 +6,8 @@ import bw_pages.homePage;
 import bw_pages.loginPage;
 import bw_pages.myOrdersPage;
 import bw_pages.myWishlistPage;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -28,7 +30,8 @@ public class myWishlistPageTest extends base{
         myWishlist = new myWishlistPage();
     }
 
-    @Test(priority=1)
+    @Test(priority=7)
+    @Severity(SeverityLevel.BLOCKER)
     public void verifyMWishlistHeadingTest(){
         myWishlist = h.clickOnMyWishlist();
 

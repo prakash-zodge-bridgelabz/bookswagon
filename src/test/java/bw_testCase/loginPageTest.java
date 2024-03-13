@@ -5,6 +5,8 @@ import bw_pages.homePage;
 import bw_pages.loginPage;
 import bw_utility.utility;
 //import org.junit.Test;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.*;
 
 //@Listeners(bw_listener.listeners.class)
@@ -27,14 +29,16 @@ public class loginPageTest extends base {
         l = new loginPage();
     }
 
-    @Test(dataProvider = "getLoginTestData", priority=1)
+    @Test(dataProvider = "getLoginTestData", priority=4)
+    @Severity(SeverityLevel.BLOCKER)
     public void multipleUserLoginTest(String username, String password) throws InterruptedException {
         System.out.println("Multiple user login method running...");
         loginPage l = new loginPage();
         h=l.multipleUserLogin(username,password);
     }
 
-    @Test(priority = 2)
+    @Test(priority = 5)
+    @Severity(SeverityLevel.BLOCKER)
     public void singleUserLogin(){
         h = l.login(prop.getProperty("ruchitaUsername"), prop.getProperty("ruchitaPassword"));
 
