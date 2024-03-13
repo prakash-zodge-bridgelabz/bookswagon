@@ -16,6 +16,10 @@ public class homePage extends base {
     @FindBy(id = "ctl00_lblUser")
     WebElement lblUsername;
 
+    public String verifyUsername(){
+        return lblUsername.getText();
+    }
+
     @FindBy(partialLinkText = "My Orders")
     WebElement btnMyOrders;
 
